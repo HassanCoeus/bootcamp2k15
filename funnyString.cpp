@@ -1,3 +1,8 @@
+// 	FunnyString
+//    	"https://www.hackerrank.com/challenges/funny-string"
+// 	"https://www.hackerrank.com/Hassancoeus"
+
+
 #include <cmath>
 #include <cstdio>
 #include <iostream>
