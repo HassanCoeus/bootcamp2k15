@@ -1,0 +1,42 @@
+Meeting with Yonus Qazi
+
+What were the questions ?
+  - What were the projects he did in the last year and details of some ?
+    -Cleaner
+      -Universal Application
+      -Duration was of 2-3 months
+      -Roles involved : 2 Dev, 1 PM, 1 Designer, 1 QA
+      -What methodolgy did they use?
+        -Agile
+      -What were the tools ?
+        -X-code, X-scope, Brackets, Transmit(ftp), git
+      -What were the success rates ?
+        -100%
+      -What Challenges do they faced ?
+        -Learning Node js and php
+        -To satisfy PM was also a challenge beacause during that period the PM's were geting changed after a regular interval.
+        -Deadline was also short.
+        -Languages used in this project was Node js, php and objective C
+    -Kacher
+    -LNPR
+      -One of the Yonus's favourite project during the last year.
+      -License Number Plate Recognition.
+      -What were the techniques they used ?
+        -Image Processing 
+        -Open CV
+      -Product of MetaDesign
+      -Constraints
+        -Image Clearance.
+        -Camera Quality.
+      -Problems Faced
+        -Sticker Removal.
+      -Tools
+        -X code,X scope, git
+      -Duration
+        -9 Months(On going).
+      -Used Open Source Objective C library for Image Processing and selecting data set.
+    -LOCHE
+
+  -What did i find interesting in all the projects ?
+    -To manage the client all by yourself.
+    -All the projects went through the standard processes and they followed standard practices.
