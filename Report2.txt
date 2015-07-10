@@ -1,0 +1,51 @@
+Business Model:
+	- Its the typical business model we are following like all other reputed companies.
+	- What type of contracts we do in this business model ?
+		- Two kinds of contracts we normally do.
+		- Fixed Price Contracts and Dedicated Development Contracts.
+		- what are DDCs ? What’s in it ?
+			- Company normally prefers DDC because the amount is fixed.
+			- Contracts are normally of min 3 months. Moderate Length projects make developers to learn more than the projects of long term that make development boring.
+			- Rates are proposed lesser to the client then we do in the FPC. Clients attracts to the rates and quality being produced and this gives us(developers) the opportunity to learn new things by working with some other companies and that gives us the experience too.
+			- One Big Plus for a developer is that all the clients are sitting in the Germany, so the developer has to satisfy the client at his end which indirectly increases the skill set of developer.
+			- Company charge 20 man days a month from the company they have dedicated their developer to. Now if the dev works for 21,22 days(Some months) or for 18,19,20 days the company will still charge for 20 man days, which is a fixed price that is very good in terms of getting a surety that you'll get the amount at the end of the month whatever the consequences are.
+		- Why company don't prefer Fixed Price Contracts?
+			- Requirement changing and to satisfy a client is pretty hard in these kind of contracts.
+			- Requirement change leads to some supplement contracts then.
+			- Solution of Business Analyst also didn't work because they cost way too much for smaller projects.
+
+Project Capturing:
+	- Normally back in Germany some other companies do the dedicated development contracts with us and give us their projects
+	- One big name is META DESIGN.
+	- Strategic Partners also give us the projects.
+	- Three Ways are being used to get projects.
+		- Business Development Team.
+		- One Time Client (They want us to make their project only for once).
+		- Cold Calling (Asking others on phone whether they need the services we are providing or not).
+
+Amount Flow:
+	- All the money comes from Germany.
+
+Company's Worth:
+	- At the moment company is worth 3.5 million Euro's.
+
+Why only in Germany?
+	- Company started business in US but then moved back eventually to Germany because they started losing their German clients in order to grab US market and according to the company one of the members from the board should be in the country where they want to start the business.
+
+Big Names with which Company do contracts:
+	- Meta Design
+	- 3PC
+	- HP (House Pilot)
+
+Who is currently on the board ?
+	- Ali (CEO) and Ahsan (COO)
+
+What are the long term plans of COEUS?
+	- Course Correction 
+	- Some plans are dynamic too (with the consequences).
+
+Culture Performance:
+	- Company has prioritized culture performance over other things and invested great amount of money in hiring QA lead, Designer, an experienced Web Engineer and is also looking for a PHD CTO to make things more and more organized and get the best out of developers.
+
+What I found best in COEUS Business strategies?
+	 - Company never compromises on the values which we Muslims hold dear. Rejecting the liquor based or interest based projects is something that is very attractive so it’s very open for me now to say that i know from where our money flows.  
