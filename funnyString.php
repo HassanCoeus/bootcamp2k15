@@ -1,4 +1,7 @@
-le($number<1 || $number>10){
+
+$number=1;
+
+while($number<1 || $number>10){
     fscanf(STDIN, "%d\n", $number);
 }
 
