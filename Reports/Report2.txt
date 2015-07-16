@@ -3,7 +3,7 @@ Business Model:
 	- What type of contracts we do in this business model ?
 		- Two kinds of contracts we normally do.
 		- Fixed Price Contracts and Dedicated Development Contracts.
-		- what are DDCs ? What’s in it ?
+		- what are DDCs ? Whatâ€™s in it ?
 			- Company normally prefers DDC because the amount is fixed.
 			- Contracts are normally of min 3 months. Moderate Length projects make developers to learn more than the projects of long term that make development boring.
 			- Rates are proposed lesser to the client then we do in the FPC. Clients attracts to the rates and quality being produced and this gives us(developers) the opportunity to learn new things by working with some other companies and that gives us the experience too.
@@ -48,4 +48,4 @@ Culture Performance:
 	- Company has prioritized culture performance over other things and invested great amount of money in hiring QA lead, Designer, an experienced Web Engineer and is also looking for a PHD CTO to make things more and more organized and get the best out of developers.
 
 What I found best in COEUS Business strategies?
-	 - Company never compromises on the values which we Muslims hold dear. Rejecting the liquor based or interest based projects is something that is very attractive so it’s very open for me now to say that i know from where our money flows.  
+	 - Company never compromises on the values which we Muslims hold dear. Rejecting the liquor based or interest based projects is something that is very attractive so itâ€™s very open for me now to say that i know from where our money flows.  
