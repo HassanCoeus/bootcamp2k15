@@ -1,0 +1,70 @@
+Following are some classes I think are the part of INSTAGRAM
+    - Profile
+        Some Attributes of the profile class are
+            -Info(Username, Email, Address, Profile Picture, isPublic).
+            -List of Profiles named Followers.
+            -List of Profiles named Followings.
+            -List of POSTS.
+            -NewsFeed.
+        Some Functions would be
+            -Upload Post.
+            -Refresh News Feed.
+            -Search User.
+            -Follow User.
+            -Search Posts By Tag.
+            -Stalk Profile.
+            -Like Post.
+            -Comment On Post.
+            -Change Password
+            -Edit Profile.
+            -Show Liked Posts.
+            -Show Followers.
+            -Show Followings.
+            -Edit Post.
+            -Delete Post.
+            -Report Post.
+   
+    - Post
+        Some Attributes of Post class would be
+            -Data(image/video).
+            -Description.
+            -Date.
+            -List of Comments.
+            -List of HashTags.
+            -List of Profiles Who Liked the post.
+            -List of Profiles Who were taged in the post.
+            -isSharedWithFB.
+            -isSharedWithTwitter.
+            -isSharedWithTumblr.
+            -isSharedWithFourSquare.
+            -isSharedWithFlicker.
+        Some Functions of Post would be
+            -Set Data(Image/Video).
+            -Set Description.
+            -Edit.
+            -Set Date.
+            -Tag Users.
+            -Update Comment List.
+            -Update Like List.
+            -SetSharings.
+
+    - Filter
+        Attributes.
+            -Name.
+            -Strength.
+
+    - Util
+        Attribute.
+            -Static List of Filters.
+        Function.
+            -Get Static List of Filters
+            -Update Filters List.
+      
+    - User
+            -Username
+            -Email
+            -Password
+        Functions would be quite simple
+            -Login
+            -Logout
+            -Signup
