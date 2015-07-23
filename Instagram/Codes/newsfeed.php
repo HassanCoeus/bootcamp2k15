@@ -1,8 +1,8 @@
 <?php 
 
  $_fp = fopen("php://stdin","r");
- include 'post.php';
- include 'dbHandler.php';
+ include_once 'post.php';
+ include_once 'dbHandler.php';
 
  class NewsFeed{
      public $arrPost;
@@ -10,13 +10,13 @@
 
      public function __construct($username)
      {
-         $this->uname = $username;
+         $this->uName = $username;
          $this->arrPost = array();
      }
 
-     public function showPosts($dh)
+     public function showPosts()
      {
-         $this->arrPost = $dh->getPostList($this->uname);
+         #$this->arrPost = $dh->getPostList($this->uName);
 
          for($i=0;$i<sizeof($this->arrPost);$i++)
          {
@@ -25,8 +25,4 @@
      }
  }
 ?>
-
-
-
-     }
 

@@ -1,6 +1,7 @@
 <?php
-  $_fp = fopen("php://stdin","r");
-  include 'user.php';
+$_fp = fopen("php://stdin","r");
+include_once 'user.php';
+include_once 'newsfeed.php';
 
   class dbHandler
   {
@@ -11,7 +12,8 @@
       {
           $u = new User("M_H_20","hassan","mhassanq1994@gmail.com");
           $u2 = new User("M_H_Q","hash","bitf11m054@pucit.edu.pk");
-          $this->arrUser = array($u,$u2);     }
+          $this->arrUser = array($u,$u2);   
+      }
 
       function checkUserNamePassword($userName,$pass)
       {
@@ -40,14 +42,24 @@
           return NULL;
       }
 
-
+      
+          
+      function getPosts()
+      {
+          return $this->arrPost;
+      }
+      
+      
+      
+      
+      
+      
 
       function addUser($userName,$email,$pass)
       {
           $i = sizeof($this->arrUser);
           $u = new User($userName,$email,$pass);
           $this->arrUser[$i]=u;
-          
           return true;
       }
 
@@ -60,9 +72,12 @@
           }
           else if(get_class($obj)=="Post")
           {
+              echo 'Saving Post: ' . $obj->pId . "\n";
               $i=sizeof($this->arrPost);
+              echo 'Size of ARR POST' . $i . "\n";
               $this->arrPost[$i]=$obj;
           }
       }
 
-  }   
+  }
+?>

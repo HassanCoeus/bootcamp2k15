@@ -1,6 +1,7 @@
 <?php
 $_fp = fopen("php://stdin","r");
-include 'dbHandler.php';
+include_once 'dbHandler.php';
+include_once 'newsfeed.php';
 #include 'post.php';
 
 echo "WELCOME TO INSTAGRAM!!! \n";
@@ -61,6 +62,9 @@ if($num==2)
       case 2:
           $dh->save($us->createPost());
           break;
+      case 3:
+          $nf = $us->getNewsFeed($dh);
+          $nf->showPosts();
       default:
           break;
       }

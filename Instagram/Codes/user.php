@@ -1,7 +1,7 @@
 <?php
 $_fp=fopen("php://stdin","r");
-include 'Profile.php';
-include 'post.php';
+include_once 'Profile.php';
+include_once 'post.php';
 
 class User{
     public $username;
@@ -65,6 +65,35 @@ class User{
         $p->pDescription = trim(fgets(STDIN));
         $p->pUsername = $this->username;
         return $p;
+    }
+
+    function getNewsFeed($dh)
+    {
+        $arrPost = $dh->getPosts();
+        $nf = new NewsFeed($this->username);
+        $c = 0;
+        $u = $dh->getUser($this->username);
+        for($i=0;$i<sizeof($arrPost);$i++)
+        {
+          if($arrPost[$i]->pUsername == $this->username)
+            {
+                $nf->arrPost[$c] = $arrPost[$i];
+                $c++;
+                break;
+            }
+            else{
+                for($j = 0; $j<sizeof($u->arrFollowings);$j++)
+                {
+                    if($u->arrFollowings[$j] == $arrPost[$i]->pUsername)
+                    {
+                         $nf->arrPost[$c] = $arrPost[$i];
+                         $c++;
+                         break;
+                    }
+                }
+            }
+        }
+        return $nf;
     }
 }
 ?>
