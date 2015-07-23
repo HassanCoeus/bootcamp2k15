@@ -1,28 +1,11 @@
 Following are some classes I think are the part of INSTAGRAM
     - Profile
         Some Attributes of the profile class are
-            -Info(Username, Email, Address, Profile Picture, isPublic).
-            -List of Profiles named Followers.
-            -List of Profiles named Followings.
-            -List of POSTS.
-            -NewsFeed.
+            -Info(Profile Name, Username, Profile Picture, isPublic, Gender).
         Some Functions would be
-            -Upload Post.
-            -Refresh News Feed.
-            -Search User.
-            -Follow User.
-            -Search Posts By Tag.
-            -Stalk Profile.
-            -Like Post.
-            -Comment On Post.
-            -Change Password
-            -Edit Profile.
-            -Show Liked Posts.
-            -Show Followers.
-            -Show Followings.
-            -Edit Post.
-            -Delete Post.
-            -Report Post.
+            -showImage()
+            -showProfileInfo()
+            -editProfile()
    
     - Post
         Some Attributes of Post class would be
@@ -39,32 +22,48 @@ Following are some classes I think are the part of INSTAGRAM
             -isSharedWithFourSquare.
             -isSharedWithFlicker.
         Some Functions of Post would be
-            -Set Data(Image/Video).
-            -Set Description.
-            -Edit.
-            -Set Date.
-            -Tag Users.
-            -Update Comment List.
-            -Update Like List.
-            -SetSharings.
+            -setData_Image/Video();
+            -setDescription();
+            -editPost();
+            -setPostDate();
+            -updateCommentList();
+            -updateLikeList();
+            -setSharings();
 
     - Filter
         Attributes.
+            -Filterid.
             -Name.
             -Strength.
+        Functions.
+            -editFilterStrength();
 
-    - Util
+    - Handler
         Attribute.
             -Static List of Filters.
         Function.
-            -Get Static List of Filters
-            -Update Filters List.
+            -getListofFilters();
+            -updateFilterList();
+            -fillFilterList();
       
     - User
-            -Username
-            -Email
-            -Password
+            -Username.
+            -Email.
+            -Password.
+            -List of Users Following.
+            -List of Followers.
+            -List of Posts.
         Functions would be quite simple
-            -Login
-            -Logout
-            -Signup
+            -login();
+            -logout();
+            -signup();
+            -getProfile();
+            -followUser();
+            -showFollowers();
+            -showFollowings();
+            -likePost();
+            -commentPost();
+            -deletePost();
+            -removeFollowing();
+            -showPosts();
+            -changePassword();
