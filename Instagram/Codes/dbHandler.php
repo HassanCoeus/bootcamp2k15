@@ -46,6 +46,7 @@ include_once 'newsfeed.php';
           
       function getPosts()
       {
+          echo 'Size of ARR POST' . sizeof($this->arrPost) . "\n";
           return $this->arrPost;
       }
       
@@ -74,8 +75,9 @@ include_once 'newsfeed.php';
           {
               echo 'Saving Post: ' . $obj->pId . "\n";
               $i=sizeof($this->arrPost);
-              echo 'Size of ARR POST' . $i . "\n";
+              
               $this->arrPost[$i]=$obj;
+              echo 'Size of ARR POST' . $i . "\n";
           }
       }
 
