@@ -50,6 +50,7 @@ Following are some classes I think are the part of INSTAGRAM
             -Username.
             -Email.
             -Password.
+            -Profile.
             -List of Users Following.
             -List of Followers.
             -List of Posts.
