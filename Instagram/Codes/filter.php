@@ -1,4 +1,5 @@
 <?php
+$_fp = fopen("php://stdin","r");
 
 class filter {
     private $filterId;
@@ -14,14 +15,8 @@ class filter {
     }
 
     function getFilterStrength() {
-        return $this->strength ."\n". $this->filterId ."\n". $this->filterName ;
+        return $this->strength ."\n". $this->filterId ."\n". $this->filterName;
     }
 }
-
-$_fp = fopen("php://stdin","r");
-$f = new filter;
-$f->setFilterName('Crema');
-$f->setFilterId(1);
-echo $f->getFilterStrength();
 ?>
 
