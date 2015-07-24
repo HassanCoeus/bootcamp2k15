@@ -65,11 +65,11 @@ if($num==2)
       case 3:
           $nf = $us->getNewsFeed($dh);
           $nf->showPosts();
+          break;
       default:
+          $c='n';
           break;
       }
-      echo "Do you want to do something else ? Press y for YES and n for NO" . "\n";
-      $c = trim(fgets($_fp));
       }while($c=='y');
 
   }

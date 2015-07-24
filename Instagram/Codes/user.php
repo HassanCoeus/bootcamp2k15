@@ -60,7 +60,7 @@ class User{
     function createPost()
     {
         $p = new Post;
-        $p->pId = rand(1,10);
+        #$p->pId = rand(1,10);
         $p->pCountOfLikes = 0;
         echo "Enter Description: ";
         $p->pDescription = trim(fgets(STDIN));
@@ -80,7 +80,7 @@ class User{
             {
                 $nf->arrPost[$c] = $arrPost[$i];
                 $c++;
-                break;
+                #break;
             }
             else{
                 for($j = 0; $j<sizeof($u->arrFollowings);$j++)
@@ -94,7 +94,7 @@ class User{
                 }
             }
         }
-        echo "size of nf: " . sizeof($nf->arrPost) . "/n";
+        #echo "size of nf: " . sizeof($nf->arrPost) . "/n";
         return $nf;
     }
 }
