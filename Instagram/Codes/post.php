@@ -1,6 +1,5 @@
 <?php
   $_fp = fopen("php://stdin","r");
-
 class Post
 {
     public $pId;
@@ -13,8 +12,21 @@ class Post
         $this->pId = 1;
         $this->pUsername = "abc";
         $this->pDescription = "desc";
-        $this->pcountOfLikes = 0;
+        $this->pCountOfLikes = 0;
     }
+
+
+    public static function fromValues($i,$u,$d)
+    {
+          $p = new Post;
+          $p->pId = $i;                  
+          $p->pUsername = $u;
+          $p->pDescription = $d;
+          $p->pCountOfLikes = 0;
+          return $p;
+    }
+
+
 
     public function showInfo()
     {
@@ -23,6 +35,4 @@ class Post
         echo "Post Description: " . $this->pDescription . "\n";
         echo "Post Likes: " . $this->pCountOfLikes . "\n";
     }
-}
-?>
-
+}?>

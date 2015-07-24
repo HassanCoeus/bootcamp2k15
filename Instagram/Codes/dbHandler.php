@@ -2,7 +2,6 @@
 $_fp = fopen("php://stdin","r");
 include_once 'user.php';
 include_once 'newsfeed.php';
-
   class dbHandler
   {
       private $arrUser;
@@ -10,9 +9,12 @@ include_once 'newsfeed.php';
 
       function __construct()
       {
-          $u = new User("M_H_20","hassan","mhassanq1994@gmail.com");
+          $u1 = new User("M_H_20","hassan","mhassanq1994@gmail.com");
           $u2 = new User("M_H_Q","hash","bitf11m054@pucit.edu.pk");
-          $this->arrUser = array($u,$u2);   
+          $p1 = Post::fromValues(1,"M_H_20","#BEAUTY #NATURE");
+          $p2 = Post::fromValues(2,"M_H_Q","#Carma");
+          $this->arrUser = array($u1,$u2);   
+          $this->arrPost = array($p1,$p2);
       }
 
       function checkUserNamePassword($userName,$pass)
@@ -42,7 +44,6 @@ include_once 'newsfeed.php';
           return NULL;
       }
 
-      
           
       function getPosts()
       {
@@ -51,11 +52,6 @@ include_once 'newsfeed.php';
       }
       
       
-      
-      
-      
-      
-
       function addUser($userName,$email,$pass)
       {
           $i = sizeof($this->arrUser);
@@ -80,6 +76,4 @@ include_once 'newsfeed.php';
               #echo 'Size of ARR POST' . $i . "\n";
           }
       }
-
-  }
-?>
+  }?>
