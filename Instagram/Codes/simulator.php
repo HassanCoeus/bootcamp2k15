@@ -1,8 +1,8 @@
 <?php
 $_fp = fopen("php://stdin","r");
-include_once 'dbHandler.php';
-include_once 'newsfeed.php';
-include_once 'Profile.php';
+include_once 'API/dbHandler.php';
+include_once 'API/newsfeed.php';
+include_once 'API/Profile.php';
 #include 'post.php';
 
 echo "WELCOME TO INSTAGRAM!!! \n";
@@ -57,7 +57,7 @@ if($num==2)
           echo "Enter a user name you want to follow: ";
           $uname =  trim(fgets($_fp));
           $us->followUser($uname,$dh);
-          $us->showInfo();
+          #$us->showInfo();
           break;
       case 2:
           $dh->save($us->createPost());
@@ -68,8 +68,17 @@ if($num==2)
           break;
       case 4:
           $us->showInfo();
+          echo "Press 1 if you want to move to your profile information.\n";
+          if(fgets(STDIN)==1)
+          {
+             $us->showProfile();
+             echo "Press 1 if you want to edit your profile.\n";
+             if(fgets(STDIN)==1)
+             {
+                 $us->editProfileInfo();
+             }
+          }
           break;
-
       default:
           $c='n';
           $ch='n';

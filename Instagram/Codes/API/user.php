@@ -14,9 +14,16 @@ class User{
     public $countOfFollowings;
     public $NewsFeed;
 
-    public function editProfile()
+    public function showProfile()
     {
         $this->prof->showProfileInfo();
+        #$this->prof->editInfo();
+        #return true;
+    }
+
+
+    public function editProfileInfo()
+    {
         $this->prof->editInfo();
         return true;
     }
@@ -26,7 +33,7 @@ class User{
         $this->username = $uname;
         $this->password = $upass;
         $this->email = $uemail;
-        $this->profile = new Profile;
+        $this->prof = new Profile;
         $this->countOfFollowers = 0;
         $this->countOfFollowings = 0;
     }

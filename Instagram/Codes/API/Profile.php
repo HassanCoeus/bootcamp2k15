@@ -14,7 +14,7 @@ $_fp = fopen("php://stdin","r");
      public function editInfo(){
         echo "Enter New Profile Name: ";
         $this->prof_name = trim(fgets(STDIN));
-        echo "Congragulations, Your new profile name is: " . $this->prof_name;
+        echo "Congragulations, Your new profile name is: " . $this->prof_name . "\n";
      }
 
      function __construct(){
