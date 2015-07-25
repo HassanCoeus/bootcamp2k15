@@ -70,6 +70,13 @@ include_once 'newsfeed.php';
           else if(get_class($obj)=="Post")
           {
               #echo 'Saving Post: ' . $obj->pId . "\n";
+              foreach($this->arrPost as $pArr)
+              {
+                  if($pArr->pId == $obj->pId)
+                  {
+                      $pArr = $obj;
+                  }
+              }
               $i=sizeof($this->arrPost);
               $obj->pId = $i+1; 
               $this->arrPost[$i]=$obj;

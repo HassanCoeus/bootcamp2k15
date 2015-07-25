@@ -35,4 +35,10 @@ class Post
         echo "Post Description: " . $this->pDescription . "\n";
         echo "Post Likes: " . $this->pCountOfLikes . "\n";
     }
+
+    public function like($dh)
+    {
+        $this->pCountOfLikes++;
+        $dh->save($this);
+    }
 }?>

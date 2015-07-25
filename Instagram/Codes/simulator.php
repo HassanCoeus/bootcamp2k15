@@ -27,6 +27,11 @@ if($num==1)
   $flag = $dh->addUser($uname,$uemail,$upass);
   if($flag)
       echo "Successfully Signedup";
+  echo "Enter 1 if you want to login with you new account now\n";
+  if(fgets(STDIN)==1)
+  {
+      $num=2;
+  }
 }
 
 if($num==2)
@@ -65,6 +70,12 @@ if($num==2)
       case 3:
           $nf = $us->getNewsFeed($dh);
           $nf->showPosts();
+          echo "Do you want to like a post from above ? Press 1 if you do \n";
+          if(fgets(STDIN)==1)
+          {
+              echo "Enter the Post id from the above shown posts \n";
+              $us->likePost($nf,fgets(STDIN),$dh);
+          }
           break;
       case 4:
           $us->showInfo();

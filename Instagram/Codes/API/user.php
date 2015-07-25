@@ -75,6 +75,20 @@ class User{
         return $p;
     }
 
+    function likePost($nf, $id, $dh)
+    {
+        #echo "The Size of newsFeed before liking: " . sizeof($nf) . "\n";
+        foreach($nf->arrPost as $p)
+        {
+            if($p->pId==$id)
+            {
+                $p->like($dh);
+            }
+        }
+    }
+
+
+
     function getNewsFeed($dh)
     {
         $arrPost = $dh->getPosts();
