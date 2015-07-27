@@ -79,6 +79,26 @@ class User{
         return;
     }
 
+    function deletePost($nf,$pid,$dh)
+    {
+        foreach($nf->arrPost as $p)                  
+        {
+            if($p->pId==$pid)
+            {
+                if($p->pUsername == $this->username)
+                {
+                    $key = array_search($p,$this->postArr);
+                    if($key!=False)
+                    {
+                        unset($this->postArr[$key]);
+                        $dh->delPost($p);
+                    }
+                }
+            }
+        }
+    }
+
+
     function likePost($nf, $id, $dh)
     {
         #echo "The Size of newsFeed before liking: " . sizeof($nf) . "\n";
@@ -104,9 +124,6 @@ class User{
             }
         }
     }
-
-
-
 
 
 

@@ -86,4 +86,14 @@ include_once 'newsfeed.php';
               #echo 'Size of ARR POST' . $i . "\n";
           }
       }
+
+
+      function delPost($p)
+      {
+          $key = array_search($p,$this->arrPost);
+          if($key!=false)
+          {
+              unset($this->arrPost[$key]);
+          }
+      }
   }?>
