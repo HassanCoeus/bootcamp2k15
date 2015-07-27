@@ -3,7 +3,6 @@ $_fp = fopen("php://stdin","r");
 include_once 'API/dbHandler.php';
 include_once 'API/newsfeed.php';
 include_once 'API/Profile.php';
-#include 'post.php';
 
 echo "WELCOME TO INSTAGRAM!!! \n";
 echo "Press 1 to Signup. \n";
@@ -15,16 +14,8 @@ $dh = new dbHandler;
 
 if($num==1)
 {
-  echo "Enter a UserName: ";
-  $uname = trim(fgets($_fp));
-  
-  echo "Enter a password: ";
-  $upass = trim(fgets($_fp));
-  
-  echo "Enter your email address: ";
-  $uemail = trim(fgets($_fp));
-  
-  $flag = $dh->addUser($uname,$uemail,$upass);
+  $us = new user("ABC","123","example@gmail.com"); 
+  $flag = $us->signup($dh);
   if($flag)
       echo "Successfully Signedup";
   echo "Enter 1 if you want to login with you new account now\n";
@@ -39,11 +30,8 @@ if($num==2)
   do
   {
     $ch='y';
-    echo "Enter a Username: ";
-    $uname = trim(fgets($_fp));
-    echo "Enter a Password: ";
-    $upass = trim(fgets($_fp));
-    $us=$dh->checkUserNamePassword($uname,$upass);
+    $us = new user("ABC","123","sample@gmail.com");
+    $us = $us->signin($dh);
     #echo "WRONG USERNAME OR PASSWORD !!! \n";
     if($us!=NULL)
     {
@@ -65,16 +53,41 @@ if($num==2)
           #$us->showInfo();
           break;
       case 2:
-          $dh->save($us->createPost());
+          $us->createPost($dh);
           break;
       case 3:
           $nf = $us->getNewsFeed($dh);
+
           $nf->showPosts();
-          echo "Do you want to like a post from above ? Press 1 if you do \n";
-          if(fgets(STDIN)==1)
+          echo "Press 1 if you want to like a post from above\n";
+          echo "Press 2 if you want to edit your post from above\n";
+          echo "Press 3 if you want to delete your post from above\n";
+          echo "Choice: ";
+          $choice = fgets(STDIN);
+          switch($choice)
           {
-              echo "Enter the Post id from the above shown posts \n";
-              $us->likePost($nf,fgets(STDIN),$dh);
+            case 1:
+            {
+                echo "Enter the Post id from the above shown posts: ";
+                $us->likePost($nf,fgets(STDIN),$dh);
+                break;
+            }
+            case 2:
+            {
+                echo "Enter the Post id from above shown posts: ";
+                $us->editPost($nf,fgets(STDIN),$dh);
+                break;
+            }
+            case 3:
+            {
+                echo "Enter the Post id you want to delete from above: ";
+                $us->deletePost($nf,fgets(STDIN),$dh);
+                break;
+            }
+            default:
+            {
+                break;
+            }
           }
           break;
       case 4:

@@ -13,6 +13,8 @@ include_once 'newsfeed.php';
           $u2 = new User("M_H_Q","hash","bitf11m054@pucit.edu.pk");
           $p1 = Post::fromValues(1,"M_H_20","#BEAUTY #NATURE");
           $p2 = Post::fromValues(2,"M_H_Q","#Carma");
+          $u1->postArr[sizeof($u1->postArr)]=$p1;
+          $u2->postArr[sizeof($u2->postArr)]=$p2;
           $this->arrUser = array($u1,$u2);   
           $this->arrPost = array($p1,$p2);
       }
@@ -56,7 +58,7 @@ include_once 'newsfeed.php';
       {
           $i = sizeof($this->arrUser);
           $u = new User($userName,$email,$pass);
-          $this->arrUser[$i]=u;
+          $this->arrUser[$i]=$u;
           return true;
       }
 
@@ -75,6 +77,7 @@ include_once 'newsfeed.php';
                   if($pArr->pId == $obj->pId)
                   {
                       $pArr = $obj;
+                      return;
                   }
               }
               $i=sizeof($this->arrPost);

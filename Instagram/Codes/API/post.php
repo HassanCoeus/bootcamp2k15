@@ -6,13 +6,15 @@ class Post
     public $pUsername;
     public $pCountOfLikes;
     public $pDescription;
+    public $plikes;
 
     public function __construct()
     { 
-        $this->pId = 1;
+        $this->pId = rand();
         $this->pUsername = "abc";
         $this->pDescription = "desc";
         $this->pCountOfLikes = 0;
+        $this->plikes = array();
     }
 
 
@@ -23,6 +25,7 @@ class Post
           $p->pUsername = $u;
           $p->pDescription = $d;
           $p->pCountOfLikes = 0;
+          $p->plikes = array();
           return $p;
     }
 
@@ -36,9 +39,28 @@ class Post
         echo "Post Likes: " . $this->pCountOfLikes . "\n";
     }
 
-    public function like($dh)
+
+    public function editInfo($dh)
     {
-        $this->pCountOfLikes++;
+        echo "Enter new description\n";
+        $this->pDescription = trim(fgets(STDIN));
         $dh->save($this);
+    }
+
+    public function like($dh,$username)
+    {
+        $key = array_search($username,$this->plikes);
+        if($key!==false){
+            unset($this->plikes[$key]);
+            $this->pCountOfLikes--;
+            $dh->save($this);
+            return;
+        }
+        
+        $this->pCountOfLikes++;
+        $n = sizeof($this->plikes);
+        $this->plikes[$n] = $username;
+        $dh->save($this);
+        return;
     }
 }?>
